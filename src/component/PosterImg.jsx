@@ -32,7 +32,7 @@ const PosterImg = () => {
             key={index}
             src={src}
             alt={name}
-            className="w-full h-screen object-cover flex-shrink-0"
+            className="w-screen h-screen object-cover flex-shrink-0"
           />
         ))}
       </div>

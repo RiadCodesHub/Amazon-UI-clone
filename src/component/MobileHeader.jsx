@@ -35,7 +35,7 @@ const MobileHeader = () => {
     {/*Header search input part*/}
 
       <div className='relative w-full h-auto bg-white rounded-lg overflow-hidden'>
-        <input type="text" className='w-full h-full  px-2 py-2 focus:outline-0 text-sm' />
+        <input type="text" placeholder='Search Amazon' className='w-full h-full  px-2 py-2 focus:outline-0 text-sm' />
 
         <button type='button' className='absolute top-0 right-0 bg-yellow-500 h-full w-fit px-2 rounded-lg' ><Search /></button>
       </div>

@@ -3,7 +3,7 @@ import { useNavigate, Link} from 'react-router-dom';
 import Header from '../component/Header';
 import MobileHeader from '../component/MobileHeader';
 import Navbar from '../component/Navbar';
-import PosterImg from '../component/posterImg';
+import PosterImg from '../component/PosterImg';
 import CardContainer from '../component/CardContainer';
 import { ItemsData,
          TopDealsWithBangladesh,

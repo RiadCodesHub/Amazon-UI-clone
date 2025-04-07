@@ -7,6 +7,7 @@ import CartIcon from '/public/cart.svg'
 import { Link, useNavigate } from 'react-router-dom';
 
 
+
 const Header = () => {
 
   const navigate = useNavigate();
@@ -44,8 +45,7 @@ const Header = () => {
        </div>
       <form action="" className='relative '>
        <label htmlFor="options" className='hidden'>Search on Amazon</label>
-       
-      
+
        </form>
 
       </div>
