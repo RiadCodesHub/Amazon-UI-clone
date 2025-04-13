@@ -22,9 +22,9 @@ const PosterImg = () => {
   }, []);
 
   return (
-    <div className="relative w-full h-screen overflow-hidden">
+    <div className="relative w-full  overflow-hidden">
       <div
-        className="flex w-full h-screen transition-transform duration-700 ease-in-out"
+        className="flex w-full h-auto transition-transform duration-700 ease-in-out"
         style={{ transform: `translateX(-${currentImg * 100}%)` }}
       >
         {HeroImgs.map(({ src, name }, index) => (
@@ -32,20 +32,20 @@ const PosterImg = () => {
             key={index}
             src={src}
             alt={name}
-            className="w-screen h-screen object-cover flex-shrink-0"
+            className="w-screen h-full aspect-1 object-cover"
           />
         ))}
       </div>
 
       {/* Navigation Buttons */}
-      <div className="w-full h-[40%] absolute top-0 left-0 right-0 flex justify-between px-5">
+      <div className="w-full h-[40%] absolute top-0 left-0 right-0 flex justify-between px-5 transform translate-y-6">
         <button onClick={handlePrev} 
-                className="border border-transparent hover:border-white hover:border-2 hover:drop-shadow-[-2px_-2px_0px_black] p-3 h-full">
-          <ChevronLeft size={50}  strokeWidth={1} className="text-white drop-shadow-[-2px_0px_0px_black]" />
+                className="border border-transparent hover:border-white hover:border-2 hover:drop-shadow-[-1px_-1px_0px_black] sm:py-3 py-2 sm:px-2 px-1 h-full">
+          <ChevronLeft size={40}  strokeWidth={1} className="text-white drop-shadow-[-2px_0px_0px_black]" />
         </button>
         <button onClick={handleNext} 
-               className="border border-transparent hover:border-white hover:border-2 hover:drop-shadow-[2px_2px_0px_black] p-3 h-full">
-          <ChevronRight size={50} strokeWidth={1} className="text-white drop-shadow-[2px_0px_0px_black]" />
+               className="border border-transparent hover:border-white hover:border-2 hover:drop-shadow-[1px_1px_0px_black] sm:py-3 py-2  sm:px-2 px-1 h-full">
+          <ChevronRight size={40} strokeWidth={1} className="text-white drop-shadow-[2px_0px_0px_black]" />
         </button>
       </div>
     </div>

@@ -13,6 +13,18 @@ export const HeroImgs = [
   { name: 'Toys', src: '/poster/toys.jpg' }  
 ];
 
+export const Options = [
+  { value: 'All Departments', label: 'All departments' },
+  { value: 'Books', label: 'Books' },
+  { value: 'Electronics', label: 'Electronics' },
+  { value: 'Art & Crafts', label: 'Art & Crafts' },
+  { value: 'Beauty & Personal Care', label: 'Beauty & Personal Care' },
+  { value: 'Boys-Fashion', label: 'Boys Fashion' },
+  { value: 'Computers', label: 'Computers' },
+  { value: 'Health & Housing', label: 'Health & Housing' },
+  { value: 'Industrial & Housing', label: 'Industrial & Housing' },
+];
+
 export const ItemsData = [
   {
     category: 'Gaming Accesories',

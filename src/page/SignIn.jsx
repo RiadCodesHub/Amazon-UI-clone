@@ -44,8 +44,8 @@ const SignIn = () => {
 
 
   return (
-    <div className="flex flex-col m-auto items-center justify-center">
-      <div className="max-w-[350px] flex flex-col items-center h-full justify-center">
+    <div className="flex flex-col items-center justify-center min-h-screen w-full overflow-y-auto px-4 py-6">
+      <div className="max-w-[350px] flex flex-col items-center h-[100%] justify-center">
         <div>
           <img src={logo_black} alt="logo" className="w-[200px] h-[60px]" />
         </div>
@@ -164,7 +164,23 @@ const SignIn = () => {
             Create your Amazon account
           </button>
         </div>
+
+    
+    
       </div>
+      <hr className='text-gray-500 h-[8px] shadow-xl w-full mt-10'/>
+     {/*footer */}
+   
+      <footer className='flex flex-col items-center justify-center gap-2 mt-10 mb-10'>
+      <div className='flex gap-6 text-sm'>
+         <a href='#' className='text-blue-500 hover:underline hover:text-black'>Condition of use</a>
+         <a href='#' className='text-blue-500 hover:underline hover:text-black'>Privacy Notice</a>
+         <a href='#' className='text-blue-500 hover:underline hover:text-black'>Help</a>
+      </div>
+      <div>
+       <p className='text-sm text-gray-500'>&copy; 1996-{new Date().getFullYear()}, Amazon.com, Inc. or it's affiliets</p>
+      </div>
+     </footer>
     </div>
   );
 };

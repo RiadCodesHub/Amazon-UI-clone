@@ -12,10 +12,12 @@ import { ItemsData,
          InternationalOrders  } from '../data/Data';
 import RelatedProducts from '../component/ScrollProducts';
 import Footer from '../component/Footer';
+import Sidemenu from '../component/Sidemenu';
 
 const Home = () => {
   const windowWidth = window.innerWidth;
   const [isMobile, setIsMobile] = useState(windowWidth < 840);
+
 
   useEffect(() => {
    const handleResize = () => {
@@ -35,40 +37,43 @@ const Home = () => {
     navigate('/signIn')
   }
 
+
   return (
-    <div className='max-w-[1520px] justify-center  mx-auto bg-slate-200 relative '>
+    <div className='w-full h-auto bg-white flex flex-col items-cenetr justify-center '>
+    <div className='max-w-[1520px] justify-center items-center  mx-auto bg-slate-200 relative '>
     {/*header and navbar*/}
       <div className='flex flex-col w-[100%] sticky top-0 z-20'>
     {!isMobile ?
     <div className='w-full h-auto flex flex-col items-center'>
       <Header /> 
       <Navbar />
-    </div>:
+    </div> :
      <MobileHeader />}
     
     </div>
+    
     {/*hero img section*/}
     <div className='relative w-full h-full overflow-y-hidden'>
     <PosterImg />
     <div className='absolute bottom-0 w-full h-[60%] bg-linear-to-t from-slate-200 via-slate-200/80 to-slate-200/0 '></div>
     </div>
 {/*products card*/}
-    <div className='relative w-full grid gap-4 md:grid-cols-4 sm:grid-cols-2 grid-cols-1 -mt-96 z-10 place-items-center overflow-hidden px-10 sm:px-6'>
+    <div className='relative w-full grid gap-4 md:grid-cols-4 sm:grid-cols-2 grid-cols-1 -mt-18 md:-mt-28 lg:-mt-60 z-10 place-items-center overflow-hidden px-10 sm:px-6'>
       { ItemsData.map((categoryData, index) => (
         <CardContainer key={index} category={categoryData.category} items={categoryData.items} linkText={categoryData.linkText} />
       ))
       }
     </div>
    {/*Related product section*/}
-  <div className= 'w-fit h-[275px] mt-4 px-6'>
+  <div className= 'w-full h-[275px] mt-4 px-10 sm:px-6'>
     <RelatedProducts carouselProducts={RelatedProductsItems} title={`Related items you've viewed`} />
   </div>
   {/*Deals for bangladesh*/}
-  <div className= 'w-full h-[275px] mt-4 px-6'>
+  <div className= 'w-full h-[275px] mt-4 px-10 sm:px-6'>
     <RelatedProducts carouselProducts={TopDealsWithBangladesh} title={"Top picks for Bangladesh"}/>
   </div>
 
-  <div className='relative w-full mt-4  grid gap-4 md:grid-cols-4 sm:grid-cols-2 grid-cols-1 z-10 place-items-center overflow-hidden px-6 '>
+  <div className='relative w-full mt-4  grid gap-4 md:grid-cols-4 sm:grid-cols-2 grid-cols-1 z-10 place-items-center overflow-hidden px-10 sm:px-6 '>
       { NewProducts.map((categoryData, index) => (
         <CardContainer key={index} category={categoryData.category} items={categoryData.items} linkText={categoryData.linkText} />
       ))
@@ -76,7 +81,7 @@ const Home = () => {
     </div>
 
     {/*New international customers purchased*/}
-  <div className= 'w-full h-[300px] mt-4 px-6 '>
+  <div className= 'w-full h-[300px] mt-4 px-10 sm:px-6 '>
     <RelatedProducts carouselProducts={InternationalOrders} title={"New international customers purchased"}/>
   </div>
 
@@ -94,6 +99,8 @@ const Home = () => {
     <Footer />
   </div>
   
+    </div>
+    
     </div>
   )
 }

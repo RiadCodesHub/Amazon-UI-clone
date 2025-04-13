@@ -12,7 +12,7 @@ const Registration = () => {
    let navigate = useNavigate();
 
    let navigateSignIn = () => {
-    navigate('/')
+    navigate('/SignIn')
    }
 
   
@@ -62,7 +62,7 @@ const Registration = () => {
 
  
  return (
-   <div className='flex flex-col m-auto items-center justify-center'>
+   <div className='flex flex-col m-auto w-full min-h-screen overflow-y-auto items-center justify-center'>
    <div className='max-w-[350px] flex flex-col items-center h-full justify-center '>
         <div><img src={logo_black} alt="logo" className='w-[200px] h-[60px]' /></div>
         <div className='max-w-sm h-auto border border-gray-300 rounded-md p-8 shadow-lg '>
